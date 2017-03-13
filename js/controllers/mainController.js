@@ -24,6 +24,16 @@ validationApp.controller('ExampleController', ['$scope', function($scope) {
     }])
     .directive('allUsers', function() {
         return {
-            template: 'All Users = {{user.name}}'
+            restrict: "E",
+            replace: false,
+            scope: {
+                user: "=infoData"
+            },
+            template: [
+                '<p>User Info</p>',
+                '<p>Your name: {{user.name}}</p>',
+                '<p>Your email: {{user.email}}</p>',
+                '<p>Your email: {{user.gender}}</p>',
+            ].join("")
         };
     });
