@@ -1,0 +1,7 @@
+body     { padding:30px; }
+.has-error p {
+    color: #a94442;
+}
+form {
+    padding: 10px;
+}
